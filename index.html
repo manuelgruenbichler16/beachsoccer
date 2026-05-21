@@ -107,13 +107,7 @@
         url("Beachsoccer.jpg") center / cover no-repeat;
     }
     .hero:before {
-      content: "";
-      position: absolute;
-      inset: auto -10% -14% -10%;
-      height: 220px;
-      background: var(--sand-light);
-      transform: rotate(-3deg);
-      z-index: -1;
+      display: none;
     }
     .hero-grid {
       display: grid;
@@ -448,8 +442,8 @@
           <p class="lead">Sand, Tore, Musik und echte Turnierstimmung in der Ravenstone Beachvolleyball-Arena. Maximal 12 Teams – schnell anmelden und dabei sein.</p>
           <div class="hero-actions">
             <button class="btn btn-primary" data-tally-open="b56Zo1" data-tally-layout="modal" data-tally-width="720" data-tally-emoji-text="⚽" data-tally-emoji-animation="wave">Jetzt Team anmelden</button>
-            <a class="btn btn-secondary" href="#spielplan">Spielplan-Info ansehen</a>
             <a class="btn btn-secondary" href="#regeln">Regeln ansehen</a>
+            <a class="btn btn-secondary" href="#spielplan">Spielplan-Info ansehen</a>
           </div>
         </div>
 
@@ -534,10 +528,10 @@
         <h2 class="section-title" style="color:white;">Beachsoccer, Sommerfeeling & Vereinsfest</h2>
         <p class="section-lead" style="color:rgba(255,255,255,.82);">Neben spannenden Spielen im Sand sorgen Grillerei, Barmix und die Meterwertung für die passende Stimmung abseits des Spielfelds.</p>
         <div class="highlight-grid">
-          <article class="highlight-card"><div class="emoji">⚽</div><b>Beachsoccer-Cup</b><span>Packende Spiele, Pokale, Preise und Siegerehrung für die besten Teams.</span></article>
-          <article class="highlight-card"><div class="emoji">🔥</div><b>Grillerei</b><span>Für Verpflegung und Stärkung zwischen den Spielen ist gesorgt.</span></article>
-          <article class="highlight-card"><div class="emoji">🍹</div><b>Meterwertung</b><span>Jeder auf euren Teamnamen gekaufte Meter zählt – egal ob Spritzer, Bier oder Barmix.</span></article>
-          <article class="highlight-card"><div class="emoji">🍸</div><b>Barmix</b><span>Sommerliche Drinks, gute Stimmung und ein Turniertag zum Feiern.</span></article>
+          <article class="highlight-card"><b>Beachsoccer-Cup</b><span>Packende Spiele, Pokale, Preise und Siegerehrung für die besten Teams.</span></article>
+          <article class="highlight-card"><b>Grillerei</b><span>Für Verpflegung und Stärkung zwischen den Spielen ist gesorgt.</span></article>
+          <article class="highlight-card"><b>Meterwertung</b><span>Jeder auf euren Teamnamen gekaufte Meter zählt – egal ob Spritzer, Bier oder Barmix.</span></article>
+          <article class="highlight-card"><b>Barmix</b><span>Sommerliche Drinks, gute Stimmung und ein Turniertag zum Feiern.</span></article>
         </div>
       </div>
     </section>
