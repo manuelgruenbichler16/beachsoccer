@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>18. Voralpen Beachsoccer-Cup 2026 | SC Rabenstein</title>
-  <meta name="description" content="18. Voralpen Beachsoccer-Cup 2026 in der Ravenstone Beachvolleyball-Arena. Anmeldung, Turnierinfos, Spielregeln, Meterwertung und Live-Spielplan." />
+  <meta name="description" content="18. Voralpen Beachsoccer-Cup 2026 in der Ravenstone Beachvolleyball-Arena. Anmeldung, Regeln, Live-Spielplan und Meterwertung." />
   <style>
     :root {
       --green: #005c2f;
@@ -23,20 +23,17 @@
     }
 
     * { box-sizing: border-box; }
-
     html { scroll-behavior: smooth; }
-
     body {
       margin: 0;
       font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
       color: var(--text);
-      background: linear-gradient(180deg, #fff7e6 0%, #ffffff 36%, #e8f4ed 100%);
+      background: linear-gradient(180deg, #fff7e6 0%, #ffffff 42%, #e8f4ed 100%);
       overflow-x: hidden;
     }
-
     img { max-width: 100%; display: block; }
-
     a { color: inherit; text-decoration: none; }
+    button { font-family: inherit; }
 
     .container {
       width: min(1120px, calc(100% - 36px));
@@ -47,12 +44,11 @@
       position: fixed;
       inset: 0 0 auto 0;
       z-index: 50;
-      background: rgba(0, 59, 32, 0.86);
+      background: rgba(0, 59, 32, 0.92);
       backdrop-filter: blur(12px);
       color: white;
       border-bottom: 1px solid rgba(255,255,255,0.12);
     }
-
     .topbar-inner {
       min-height: 72px;
       display: flex;
@@ -60,17 +56,15 @@
       justify-content: space-between;
       gap: 18px;
     }
-
     .brand {
       display: flex;
       align-items: center;
       gap: 12px;
-      font-weight: 900;
+      font-weight: 950;
       letter-spacing: .04em;
       text-transform: uppercase;
       font-size: 14px;
     }
-
     .brand img {
       width: 44px;
       height: 44px;
@@ -79,17 +73,6 @@
       border-radius: 999px;
       padding: 3px;
     }
-
-    .nav {
-      display: flex;
-      align-items: center;
-      gap: 18px;
-      font-size: 14px;
-      font-weight: 800;
-    }
-
-    .nav a { opacity: .9; }
-    .nav a:hover { opacity: 1; color: var(--yellow); }
 
     .btn {
       display: inline-flex;
@@ -104,15 +87,15 @@
       cursor: pointer;
       transition: transform .2s ease, box-shadow .2s ease, background .2s ease;
       box-shadow: 0 10px 26px rgba(0,0,0,0.18);
+      font-size: 15px;
     }
-
     .btn:hover { transform: translateY(-2px); }
     .btn-primary { background: var(--yellow); color: #101010; }
     .btn-secondary { background: white; color: var(--green-dark); }
     .btn-green { background: var(--green); color: white; }
 
     .hero {
-      min-height: 96vh;
+      min-height: 94vh;
       display: grid;
       align-items: end;
       position: relative;
@@ -120,10 +103,9 @@
       color: white;
       padding: 126px 0 64px;
       background:
-        linear-gradient(110deg, rgba(0,40,23,.92) 0%, rgba(0,62,34,.75) 43%, rgba(0,0,0,.22) 100%),
+        linear-gradient(110deg, rgba(0,40,23,.92) 0%, rgba(0,62,34,.74) 43%, rgba(0,0,0,.22) 100%),
         url("Beachsoccer.jpg") center / cover no-repeat;
     }
-
     .hero:before {
       content: "";
       position: absolute;
@@ -133,14 +115,12 @@
       transform: rotate(-3deg);
       z-index: -1;
     }
-
     .hero-grid {
       display: grid;
-      grid-template-columns: 1.2fr .8fr;
+      grid-template-columns: 1.18fr .82fr;
       gap: 40px;
       align-items: end;
     }
-
     .eyebrow {
       display: inline-flex;
       align-items: center;
@@ -149,13 +129,12 @@
       border: 1px solid rgba(255,255,255,.24);
       border-radius: 999px;
       padding: 9px 14px;
-      font-weight: 900;
+      font-weight: 950;
       text-transform: uppercase;
       letter-spacing: .08em;
       font-size: 13px;
       backdrop-filter: blur(8px);
     }
-
     h1 {
       margin: 18px 0 18px;
       font-size: clamp(44px, 8vw, 96px);
@@ -164,21 +143,18 @@
       letter-spacing: -0.07em;
       max-width: 860px;
     }
-
     .hero h1 span {
       color: var(--yellow);
       display: block;
       text-shadow: 0 6px 0 rgba(0,0,0,.2);
     }
-
     .lead {
       font-size: clamp(18px, 2vw, 24px);
-      max-width: 680px;
+      max-width: 700px;
       line-height: 1.45;
-      color: rgba(255,255,255,.9);
+      color: rgba(255,255,255,.92);
       margin: 0 0 26px;
     }
-
     .hero-actions { display: flex; flex-wrap: wrap; gap: 14px; }
 
     .hero-card {
@@ -189,13 +165,11 @@
       box-shadow: var(--shadow);
       border: 1px solid rgba(255,255,255,.6);
     }
-
     .hero-card img {
       width: 132px;
       margin: -82px auto 6px;
       filter: drop-shadow(0 14px 22px rgba(0,0,0,.25));
     }
-
     .date-big {
       font-size: 48px;
       line-height: .95;
@@ -203,7 +177,6 @@
       letter-spacing: -0.05em;
       text-align: center;
     }
-
     .date-big small {
       display: block;
       font-size: 17px;
@@ -212,7 +185,6 @@
       color: var(--muted);
       margin-bottom: 8px;
     }
-
     .countdown {
       margin-top: 18px;
       padding-top: 18px;
@@ -222,22 +194,10 @@
       gap: 10px;
       text-align: center;
     }
+    .countdown strong { display: block; font-size: 24px; color: var(--green); }
+    .countdown span { font-size: 11px; text-transform: uppercase; font-weight: 900; color: var(--muted); }
 
-    .countdown strong {
-      display: block;
-      font-size: 24px;
-      color: var(--green);
-    }
-
-    .countdown span {
-      font-size: 11px;
-      text-transform: uppercase;
-      font-weight: 900;
-      color: var(--muted);
-    }
-
-    section { padding: 86px 0; }
-
+    section { padding: 76px 0; }
     .section-title {
       margin: 0 0 18px;
       font-size: clamp(34px, 5vw, 58px);
@@ -245,7 +205,6 @@
       letter-spacing: -0.055em;
       color: var(--green-dark);
     }
-
     .section-kicker {
       color: var(--blue);
       text-transform: uppercase;
@@ -254,7 +213,6 @@
       font-size: 13px;
       margin-bottom: 12px;
     }
-
     .section-lead {
       max-width: 760px;
       color: #4d4d4d;
@@ -263,99 +221,96 @@
       margin: 0 0 34px;
     }
 
-    .info-grid {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 18px;
-      margin-top: -16px;
-      position: relative;
-      z-index: 2;
-    }
-
-    .info-card, .card {
+    .quickfacts { padding: 34px 0 10px; }
+    .quickfact-bar {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      align-items: center;
+      justify-content: center;
       background: white;
-      border-radius: var(--radius);
-      padding: 24px;
-      box-shadow: 0 18px 46px rgba(0,60,32,.12);
+      border-radius: 999px;
+      padding: 14px 18px;
+      box-shadow: 0 14px 34px rgba(0,60,32,.12);
       border: 1px solid rgba(0,92,47,.08);
     }
-
-    .info-card .icon {
-      font-size: 34px;
-      margin-bottom: 12px;
-    }
-
-    .info-card strong {
-      display: block;
+    .quickfact-bar span {
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
       color: var(--green-dark);
-      font-size: 22px;
-      line-height: 1.1;
-      margin-bottom: 8px;
+      font-weight: 900;
+      white-space: nowrap;
+      padding: 7px 10px;
     }
 
-    .info-card span { color: var(--muted); line-height: 1.45; }
-
-    .highlights {
-      background: var(--green-dark);
-      color: white;
-      position: relative;
+    .rules-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 14px;
+    }
+    details {
+      background: white;
+      border-radius: 18px;
+      padding: 0;
+      border: 1px solid rgba(0,92,47,.12);
+      box-shadow: 0 12px 26px rgba(0,60,32,.08);
       overflow: hidden;
     }
-
-    .highlights:before {
-      content: "";
-      position: absolute;
-      inset: -120px -100px auto auto;
-      width: 320px;
-      height: 320px;
-      background: var(--yellow);
-      border-radius: 50%;
-      opacity: .22;
-    }
-
-    .highlight-grid {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
+    summary {
+      list-style: none;
+      cursor: pointer;
+      font-weight: 950;
+      color: var(--green-dark);
+      padding: 18px 20px;
+      display: flex;
+      justify-content: space-between;
       gap: 18px;
-      margin-top: 34px;
+    }
+    summary::-webkit-details-marker { display: none; }
+    summary:after { content: "+"; font-size: 22px; color: var(--blue); }
+    details[open] summary:after { content: "–"; }
+    details p { margin: 0; padding: 0 20px 20px; color: #555; line-height: 1.6; }
+    .admin-note {
+      margin-top: 22px;
+      padding: 18px;
+      border-radius: 18px;
+      background: rgba(0,92,47,.08);
+      color: var(--green-dark);
+      line-height: 1.55;
+      font-size: 14px;
     }
 
-    .highlight-card {
-      background: rgba(255,255,255,.09);
-      border: 1px solid rgba(255,255,255,.16);
-      border-radius: var(--radius);
-      padding: 26px;
-      min-height: 180px;
+    .bracket { background: linear-gradient(135deg, rgba(0,148,201,.12), rgba(243,192,47,.2)); }
+    .bracket-card {
+      background: white;
+      border-radius: 34px;
+      padding: clamp(28px, 5vw, 54px);
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 28px;
+      align-items: center;
+      box-shadow: var(--shadow);
     }
 
-    .highlight-card b {
-      display: block;
-      font-size: 25px;
-      margin: 12px 0 9px;
-    }
-
-    .highlight-card span { color: rgba(255,255,255,.78); line-height: 1.55; }
-    .highlight-card .emoji { font-size: 42px; }
-
+    .meter-section { padding-top: 84px; }
     .split {
       display: grid;
-      grid-template-columns: .9fr 1.1fr;
+      grid-template-columns: .95fr 1.05fr;
       gap: 34px;
       align-items: center;
     }
-
     .meter-box {
       background:
         linear-gradient(135deg, rgba(0,92,47,.94), rgba(0,59,32,.98)),
         url("Beachsoccer3.jpg") center / cover no-repeat;
       color: white;
       border-radius: 34px;
-      padding: clamp(28px, 5vw, 54px);
+      padding: clamp(30px, 5vw, 54px);
       box-shadow: var(--shadow);
       position: relative;
       overflow: hidden;
     }
-
     .meter-box:after {
       content: "10 Getränke = 1 Meter";
       position: absolute;
@@ -370,43 +325,24 @@
       letter-spacing: .04em;
       box-shadow: 0 12px 28px rgba(0,0,0,.25);
     }
-
     .meter-box h2 {
       margin: 0 0 16px;
       font-size: clamp(36px, 6vw, 68px);
       line-height: .95;
       letter-spacing: -0.06em;
     }
-
     .meter-box p {
       font-size: 19px;
       line-height: 1.6;
-      color: rgba(255,255,255,.88);
+      color: rgba(255,255,255,.9);
       max-width: 760px;
+      margin-bottom: 0;
     }
-
-    .pill-list {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px;
-      margin-top: 24px;
-    }
-
-    .pill {
-      background: rgba(255,255,255,.14);
-      border: 1px solid rgba(255,255,255,.22);
-      color: white;
-      border-radius: 999px;
-      padding: 10px 14px;
-      font-weight: 900;
-    }
-
     .gallery {
       display: grid;
       grid-template-columns: 1.1fr .9fr;
       gap: 18px;
     }
-
     .gallery img {
       height: 100%;
       min-height: 220px;
@@ -414,96 +350,40 @@
       border-radius: 28px;
       box-shadow: 0 18px 44px rgba(0,0,0,.12);
     }
+    .gallery-small { display: grid; gap: 18px; }
 
-    .gallery-small {
-      display: grid;
-      gap: 18px;
-    }
-
-    .registration {
-      background: linear-gradient(180deg, white 0%, var(--sand-light) 100%);
-    }
-
-    .form-frame {
-      background: white;
-      border-radius: 28px;
-      padding: 18px;
-      box-shadow: var(--shadow);
-      border: 1px solid rgba(0,0,0,.07);
+    .highlights {
+      background: var(--green-dark);
+      color: white;
+      position: relative;
       overflow: hidden;
     }
-
-    .form-placeholder {
-      min-height: 560px;
-      border: 2px dashed rgba(0,92,47,.22);
-      border-radius: 22px;
+    .highlights:before {
+      content: "";
+      position: absolute;
+      inset: -120px -100px auto auto;
+      width: 320px;
+      height: 320px;
+      background: var(--yellow);
+      border-radius: 50%;
+      opacity: .22;
+    }
+    .highlight-grid {
       display: grid;
-      place-items: center;
-      text-align: center;
-      padding: 34px;
-      background: linear-gradient(135deg, #f7fff9, #fff8e6);
-    }
-
-    .form-placeholder h3 {
-      margin: 0 0 10px;
-      font-size: 32px;
-      color: var(--green-dark);
-    }
-
-    .form-placeholder p { color: var(--muted); max-width: 560px; line-height: 1.6; }
-
-    .rules-grid {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 14px;
-    }
-
-    details {
-      background: white;
-      border-radius: 18px;
-      padding: 0;
-      border: 1px solid rgba(0,92,47,.12);
-      box-shadow: 0 12px 26px rgba(0,60,32,.08);
-      overflow: hidden;
-    }
-
-    summary {
-      list-style: none;
-      cursor: pointer;
-      font-weight: 950;
-      color: var(--green-dark);
-      padding: 18px 20px;
-      display: flex;
-      justify-content: space-between;
+      grid-template-columns: repeat(4, 1fr);
       gap: 18px;
+      margin-top: 34px;
     }
-
-    summary::-webkit-details-marker { display: none; }
-    summary:after { content: "+"; font-size: 22px; color: var(--blue); }
-    details[open] summary:after { content: "–"; }
-
-    details p {
-      margin: 0;
-      padding: 0 20px 20px;
-      color: #555;
-      line-height: 1.6;
+    .highlight-card {
+      background: rgba(255,255,255,.09);
+      border: 1px solid rgba(255,255,255,.16);
+      border-radius: var(--radius);
+      padding: 26px;
+      min-height: 170px;
     }
-
-    .bracket {
-      background:
-        linear-gradient(135deg, rgba(0,148,201,.12), rgba(243,192,47,.2));
-    }
-
-    .bracket-card {
-      background: white;
-      border-radius: 34px;
-      padding: clamp(28px, 5vw, 54px);
-      display: grid;
-      grid-template-columns: 1fr auto;
-      gap: 28px;
-      align-items: center;
-      box-shadow: var(--shadow);
-    }
+    .highlight-card b { display: block; font-size: 25px; margin: 12px 0 9px; }
+    .highlight-card span { color: rgba(255,255,255,.78); line-height: 1.55; }
+    .highlight-card .emoji { font-size: 42px; }
 
     .contact-card {
       display: grid;
@@ -516,46 +396,36 @@
       padding: clamp(28px, 5vw, 48px);
       box-shadow: var(--shadow);
     }
-
     .contact-card h2 { margin: 0 0 10px; font-size: clamp(32px, 5vw, 54px); letter-spacing: -0.05em; }
     .contact-card p { margin: 0; color: rgba(255,255,255,.82); font-size: 18px; }
-
-    footer {
-      background: #07140e;
-      color: rgba(255,255,255,.72);
-      padding: 32px 0;
-      text-align: center;
-      font-size: 14px;
-    }
-
-    .admin-note {
-      margin-top: 22px;
-      padding: 18px;
-      border-radius: 18px;
-      background: rgba(0,92,47,.08);
-      color: var(--green-dark);
-      line-height: 1.55;
-      font-size: 14px;
-    }
+    footer { background: #07140e; color: rgba(255,255,255,.72); padding: 32px 0; text-align: center; font-size: 14px; }
 
     @media (max-width: 920px) {
-      .nav { display: none; }
       .hero-grid, .split, .bracket-card, .contact-card { grid-template-columns: 1fr; }
       .hero-card { margin-top: 56px; }
-      .info-grid, .highlight-grid { grid-template-columns: repeat(2, 1fr); }
+      .highlight-grid { grid-template-columns: repeat(2, 1fr); }
       .gallery { grid-template-columns: 1fr; }
     }
-
     @media (max-width: 620px) {
       .container { width: min(100% - 24px, 1120px); }
-      .hero { min-height: auto; padding-top: 110px; }
-      .info-grid, .highlight-grid, .rules-grid { grid-template-columns: 1fr; }
-      h1 { font-size: 46px; }
-      .btn { width: 100%; }
-      .countdown strong { font-size: 20px; }
+      .topbar-inner { min-height: 62px; justify-content: center; }
+      .brand { font-size: 13px; }
+      .brand img { width: 38px; height: 38px; }
+      .hero { min-height: auto; padding: 108px 0 46px; }
+      h1 { font-size: 45px; }
+      .lead { font-size: 18px; }
+      .hero-actions { gap: 10px; }
+      .btn { width: 100%; padding: 13px 18px; }
+      .hero-card { display: none; }
+      .quickfact-bar { border-radius: 24px; justify-content: flex-start; }
+      .quickfact-bar span { width: 100%; white-space: normal; }
+      section { padding: 52px 0; }
+      .rules-grid, .highlight-grid { grid-template-columns: 1fr; }
       .meter-box:after { position: static; display: inline-block; transform: none; margin-bottom: 16px; padding: 10px 14px; border-radius: 999px; }
-      .topbar-inner { min-height: 64px; }
-      .brand span { display: none; }
+      .meter-box h2 { font-size: 43px; }
+      .meter-box p { font-size: 17px; }
+      .gallery img { min-height: 190px; }
+      .contact-card { text-align: center; }
     }
   </style>
 </head>
@@ -566,14 +436,6 @@
         <img src="Fußballrabe_dunkler.png" alt="SC Rabenstein Fußballrabe" />
         <span>SC Rabenstein · Beachsoccer</span>
       </a>
-      <nav class="nav" aria-label="Hauptnavigation">
-        <a href="#infos">Infos</a>
-        <a href="#meterwertung">Meterwertung</a>
-        <a href="#anmeldung">Anmeldung</a>
-        <a href="#regeln">Regeln</a>
-        <a href="#spielplan">Spielplan</a>
-      </nav>
-      <button class="btn btn-primary" data-tally-open="b56Zo1" data-tally-layout="modal" data-tally-width="720" data-tally-emoji-text="⚽" data-tally-emoji-animation="wave">Team anmelden</button>
     </div>
   </header>
 
@@ -587,6 +449,7 @@
           <div class="hero-actions">
             <button class="btn btn-primary" data-tally-open="b56Zo1" data-tally-layout="modal" data-tally-width="720" data-tally-emoji-text="⚽" data-tally-emoji-animation="wave">Jetzt Team anmelden</button>
             <a class="btn btn-secondary" href="#spielplan">Spielplan-Info ansehen</a>
+            <a class="btn btn-secondary" href="#regeln">Regeln ansehen</a>
           </div>
         </div>
 
@@ -603,73 +466,14 @@
       </div>
     </section>
 
-    <section id="infos">
+    <section class="quickfacts">
       <div class="container">
-        <div class="info-grid">
-          <article class="info-card"><div class="icon">📍</div><strong>Ravenstone Beachvolleyball-Arena</strong><span>Königsbachstraße 2, 3203 Rabenstein an der Pielach</span></article>
-          <article class="info-card"><div class="icon">🕙</div><strong>Start 10:00 Uhr</strong><span>Treffpunkt und Anmeldung bis spätestens 09:30 Uhr am Beachplatz.</span></article>
-          <article class="info-card"><div class="icon">💶</div><strong>50 € Nenngeld</strong><span>Pro Mannschaft direkt bei der Turnierleitung zu bezahlen.</span></article>
-          <article class="info-card"><div class="icon">👥</div><strong>Max. 12 Teams</strong><span>First come, first serve – die Startplätze sind begrenzt.</span></article>
-        </div>
-      </div>
-    </section>
-
-    <section class="highlights">
-      <div class="container">
-        <div class="section-kicker">Was euch erwartet</div>
-        <h2 class="section-title" style="color:white;">Beachsoccer, Sommerfeeling & Vereinsfest</h2>
-        <p class="section-lead" style="color:rgba(255,255,255,.82);">Neben spannenden Spielen im Sand sorgen Grillerei, Barmix und die Meterwertung für die passende Stimmung abseits des Spielfelds.</p>
-        <div class="highlight-grid">
-          <article class="highlight-card"><div class="emoji">⚽</div><b>Beachsoccer-Cup</b><span>Packende Spiele, Pokale, Preise und Siegerehrung für die besten Teams.</span></article>
-          <article class="highlight-card"><div class="emoji">🔥</div><b>Grillerei</b><span>Für Verpflegung und Stärkung zwischen den Spielen ist gesorgt.</span></article>
-          <article class="highlight-card"><div class="emoji">🍹</div><b>Meterwertung</b><span>Jeder auf euren Teamnamen gekaufte Meter zählt – egal ob Spritzer, Bier oder Barmix.</span></article>
-          <article class="highlight-card"><div class="emoji">🍸</div><b>Barmix</b><span>Sommerliche Drinks, gute Stimmung und ein Turniertag zum Feiern.</span></article>
-        </div>
-      </div>
-    </section>
-
-    <section id="meterwertung">
-      <div class="container split">
-        <div class="meter-box">
-          <h2>Nicht nur am Sand wird gekämpft.</h2>
-          <p>Bei der Meterwertung zählt jeder auf euren Teamnamen gekaufte Meter – egal ob Spritzer, Bier oder Barmix. Ein Meter entspricht 10 Getränken. Bis zum Ende des Finalspiels wird mitgeschrieben. Das trinkstärkste Team bekommt eine eigene Siegerehrung mit Pokalen, Preisen und Urkunden.</p>
-          <div class="pill-list">
-            <span class="pill">Eigene Pokale</span>
-            <span class="pill">Eigene Preise</span>
-            <span class="pill">Eigene Urkunden</span>
-            <span class="pill">Separate Siegerehrung</span>
-          </div>
-        </div>
-        <div class="gallery">
-          <img src="Beachsoccer3.jpg" alt="Teams feiern bei der Ravenstone Beach Arena" />
-          <div class="gallery-small">
-            <img src="Beachsoccer1.jpg" alt="Beachsoccer-Spiel in der Ravenstone Beach Arena" />
-            <img src="Beachsoccer4.jpg" alt="Beachsoccer-Spielszene" />
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="anmeldung" class="registration">
-      <div class="container split">
-        <div>
-          <div class="section-kicker">Anmeldung</div>
-          <h2 class="section-title">Sichert euch euren Startplatz.</h2>
-          <p class="section-lead">Die Anmeldung erfolgt über ein Google Formular. Die Startplätze sind auf 12 Teams begrenzt. Nach der Anmeldung melden wir uns bei Bedarf direkt bei euch.</p>
-          <div class="card">
-            <strong style="font-size:22px;color:var(--green-dark);">Im Formular werden abgefragt:</strong>
-            <p style="line-height:1.7;color:#555;">Teamname, Dressenfarbe optional, Kontaktperson mit Telefonnummer, Einlaufmusik optional und Spieler-Namen – falls diese schon bekannt sind. Die finale Spielerliste kann auch am Turniertag bekanntgegeben werden.</p>
-          </div>
-        </div>
-        <div class="form-frame">
-          <div class="form-placeholder">
-            <div>
-              <h3>Anmeldung über Tally</h3>
-              <p>Das Anmeldeformular öffnet sich in einem modernen Popup. So bleibt die Seite übersichtlich und die Anmeldung funktioniert besonders gut am Handy.</p>
-              <button class="btn btn-green" data-tally-open="b56Zo1" data-tally-layout="modal" data-tally-width="720" data-tally-emoji-text="⚽" data-tally-emoji-animation="wave">Anmeldeformular öffnen</button>
-              <p style="font-size:14px;margin-top:18px;">Alternativ direkt öffnen: <a href="https://tally.so/r/b56Zo1" target="_blank" rel="noopener" style="font-weight:950;text-decoration:underline;color:var(--green-dark);">https://tally.so/r/b56Zo1</a></p>
-            </div>
-          </div>
+        <div class="quickfact-bar">
+          <span>📍 Ravenstone Beachvolleyball-Arena</span>
+          <span>🕘 Treffpunkt 09:30 Uhr</span>
+          <span>💶 50 € Nenngeld</span>
+          <span>👥 max. 12 Teams</span>
+          <span>⚽ 4 Feldspieler + 1 Tormann</span>
         </div>
       </div>
     </section>
@@ -701,9 +505,39 @@
           <div>
             <div class="section-kicker">Live-Spielplan</div>
             <h2 class="section-title">Turnierbaum & Ergebnisse</h2>
-            <p class="section-lead" style="margin-bottom:0;">Der Spielplan wird nach Anmeldeschluss ergänzt. Am Turniertag sind Turnierbaum und Ergebnisse über die externe Live-Seite abrufbar.</p>
+            <p class="section-lead" style="margin-bottom:0;">Die Gruppeneinteilung und der finale Spielplan werden nach Anmeldeschluss ergänzt. Am Turniertag findet ihr hier den Live-Spielplan inklusive aktueller Ergebnisse.</p>
           </div>
           <a class="btn btn-green" href="#kontakt">Link folgt vor dem Turnier</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="meterwertung" class="meter-section">
+      <div class="container split">
+        <div class="meter-box">
+          <h2>Nicht nur am Sand wird gekämpft.</h2>
+          <p>Bei der Meterwertung zählt jeder auf euren Teamnamen gekaufte Meter – egal ob Spritzer, Bier oder Barmix. Ein Meter entspricht 10 Getränken. Bis zum Ende des Finalspiels wird mitgeschrieben. Das trinkstärkste Team bekommt eine eigene Siegerehrung mit Pokalen, Preisen und Urkunden.</p>
+        </div>
+        <div class="gallery">
+          <img src="Beachsoccer3.jpg" alt="Teams feiern bei der Ravenstone Beach Arena" />
+          <div class="gallery-small">
+            <img src="Beachsoccer1.jpg" alt="Beachsoccer-Spiel in der Ravenstone Beach Arena" />
+            <img src="Beachsoccer4.jpg" alt="Beachsoccer-Spielszene" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="highlights">
+      <div class="container">
+        <div class="section-kicker">Was euch erwartet</div>
+        <h2 class="section-title" style="color:white;">Beachsoccer, Sommerfeeling & Vereinsfest</h2>
+        <p class="section-lead" style="color:rgba(255,255,255,.82);">Neben spannenden Spielen im Sand sorgen Grillerei, Barmix und die Meterwertung für die passende Stimmung abseits des Spielfelds.</p>
+        <div class="highlight-grid">
+          <article class="highlight-card"><div class="emoji">⚽</div><b>Beachsoccer-Cup</b><span>Packende Spiele, Pokale, Preise und Siegerehrung für die besten Teams.</span></article>
+          <article class="highlight-card"><div class="emoji">🔥</div><b>Grillerei</b><span>Für Verpflegung und Stärkung zwischen den Spielen ist gesorgt.</span></article>
+          <article class="highlight-card"><div class="emoji">🍹</div><b>Meterwertung</b><span>Jeder auf euren Teamnamen gekaufte Meter zählt – egal ob Spritzer, Bier oder Barmix.</span></article>
+          <article class="highlight-card"><div class="emoji">🍸</div><b>Barmix</b><span>Sommerliche Drinks, gute Stimmung und ein Turniertag zum Feiern.</span></article>
         </div>
       </div>
     </section>
@@ -727,32 +561,25 @@
 
   <script>
     const EVENT_DATE = new Date("2026-06-27T10:00:00+02:00");
-
     function updateCountdown() {
       const now = new Date();
       const diff = EVENT_DATE - now;
       const boxes = document.querySelectorAll("#countdown strong");
-
+      if (!boxes.length) return;
       if (diff <= 0) {
-        boxes[0].textContent = "0";
-        boxes[1].textContent = "0";
-        boxes[2].textContent = "0";
-        boxes[3].textContent = "0";
+        boxes.forEach(box => box.textContent = "0");
         return;
       }
-
       const seconds = Math.floor(diff / 1000);
       const days = Math.floor(seconds / 86400);
       const hours = Math.floor((seconds % 86400) / 3600);
       const minutes = Math.floor((seconds % 3600) / 60);
       const secs = seconds % 60;
-
       boxes[0].textContent = days;
       boxes[1].textContent = hours;
       boxes[2].textContent = minutes;
       boxes[3].textContent = secs;
     }
-
     updateCountdown();
     setInterval(updateCountdown, 1000);
   </script>
