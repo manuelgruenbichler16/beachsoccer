@@ -150,6 +150,19 @@
       margin: 0 0 26px;
     }
     .hero-actions { display: flex; flex-wrap: wrap; gap: 14px; }
+    .mobile-countdown {
+      display: none;
+      margin-top: 16px;
+      background: rgba(255,255,255,.14);
+      border: 1px solid rgba(255,255,255,.22);
+      border-radius: 18px;
+      padding: 12px 14px;
+      color: white;
+      backdrop-filter: blur(8px);
+      font-weight: 950;
+      text-align: center;
+    }
+    .mobile-countdown span { color: var(--yellow); }
 
     .hero-card {
       background: rgba(255,255,255,.94);
@@ -345,6 +358,7 @@
       box-shadow: 0 18px 44px rgba(0,0,0,.12);
     }
     .gallery-small { display: grid; gap: 18px; }
+    .mobile-gallery-scroll { display: contents; }
 
     .highlights {
       background: var(--green-dark);
@@ -411,6 +425,7 @@
       .hero-actions { gap: 10px; }
       .btn { width: 100%; padding: 13px 18px; }
       .hero-card { display: none; }
+      .mobile-countdown { display: block; }
       .quickfact-bar { border-radius: 24px; justify-content: flex-start; }
       .quickfact-bar span { width: 100%; white-space: normal; }
       section { padding: 52px 0; }
@@ -418,7 +433,20 @@
       .meter-box:after { position: static; display: inline-block; transform: none; margin-bottom: 16px; padding: 10px 14px; border-radius: 999px; }
       .meter-box h2 { font-size: 43px; }
       .meter-box p { font-size: 17px; }
-      .gallery img { min-height: 190px; }
+      .gallery { display: block; margin-left: -12px; margin-right: -12px; }
+      .mobile-gallery-scroll {
+        display: flex;
+        gap: 12px;
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+        padding: 4px 12px 14px;
+      }
+      .mobile-gallery-scroll img {
+        min-width: 82%;
+        height: 230px;
+        min-height: 230px;
+        scroll-snap-align: start;
+      }
       .contact-card { text-align: center; }
     }
   </style>
@@ -445,6 +473,7 @@
             <a class="btn btn-secondary" href="#regeln">Regeln ansehen</a>
             <a class="btn btn-secondary" href="#spielplan">Spielplan-Info ansehen</a>
           </div>
+          <div class="mobile-countdown" id="mobileCountdown">Noch <span>–</span> bis zum Turnier</div>
         </div>
 
         <aside class="hero-card" aria-label="Eventdatum und Countdown">
@@ -465,9 +494,7 @@
         <div class="quickfact-bar">
           <span>📍 Ravenstone Beachvolleyball-Arena</span>
           <span>🕘 Treffpunkt 09:30 Uhr</span>
-          <span>💶 50 € Nenngeld</span>
-          <span>👥 max. 12 Teams</span>
-          <span>⚽ 4 Feldspieler + 1 Tormann</span>
+          <span>💶 50 € Nenngeld pro Team</span>
         </div>
       </div>
     </section>
@@ -476,7 +503,7 @@
       <div class="container">
         <div class="section-kicker">Turnierinfos & Spielregeln</div>
         <h2 class="section-title">Alles Wichtige auf einen Blick.</h2>
-        <p class="section-lead">Gespielt wird mit 4 Feldspielern und 1 Tormann. Ersatzspieler sind unbegrenzt möglich, gewechselt wird fliegend.</p>
+        
         <div class="rules-grid">
           <details open><summary>Spieleranzahl & Wechsel</summary><p>Es wird mit 4 Feldspielern und 1 Tormann gespielt. Spielerwechsel sind beliebig oft und fliegend möglich. Ersatzspieler sind unlimitiert.</p></details>
           <details><summary>Anstoß & Abseits</summary><p>Beim Anstoß ist ein Abstand von mindestens 5 Metern einzuhalten. Ein direktes Tor aus dem Anstoß ist nicht möglich – davor muss ein Pass erfolgen. Abseits gibt es nicht.</p></details>
@@ -510,11 +537,11 @@
       <div class="container split">
         <div class="meter-box">
           <h2>Nicht nur am Sand wird gekämpft.</h2>
-          <p>Bei der Meterwertung zählt jeder auf euren Teamnamen gekaufte Meter – egal ob Spritzer, Bier oder Barmix. Ein Meter entspricht 10 Getränken. Bis zum Ende des Finalspiels wird mitgeschrieben. Das trinkstärkste Team bekommt eine eigene Siegerehrung mit Pokalen, Preisen und Urkunden.</p>
+          <p>Bei der Meterwertung zählt jeder auf euren Teamnamen gekaufte Meter – egal ob Spritzer, Bier oder Barmix. Ein Meter entspricht 10 Getränken. Bis zum Ende des Finalspiels wird mitgeschrieben. Die trinkstärksten Teams werden gesondert prämiert.</p>
         </div>
         <div class="gallery">
-          <img src="Beachsoccer3.jpg" alt="Teams feiern bei der Ravenstone Beach Arena" />
-          <div class="gallery-small">
+          <div class="mobile-gallery-scroll">
+            <img src="Beachsoccer3.jpg" alt="Teams feiern bei der Ravenstone Beach Arena" />
             <img src="Beachsoccer1.jpg" alt="Beachsoccer-Spiel in der Ravenstone Beach Arena" />
             <img src="Beachsoccer4.jpg" alt="Beachsoccer-Spielszene" />
           </div>
@@ -525,13 +552,13 @@
     <section class="highlights">
       <div class="container">
         <div class="section-kicker">Was euch erwartet</div>
-        <h2 class="section-title" style="color:white;">Beachsoccer, Sommerfeeling & Vereinsfest</h2>
-        <p class="section-lead" style="color:rgba(255,255,255,.82);">Neben spannenden Spielen im Sand sorgen Grillerei, Barmix und die Meterwertung für die passende Stimmung abseits des Spielfelds.</p>
+        <h2 class="section-title" style="color:white;">Beachsoccer, Sommerfeeling & gute Stimmung</h2>
+        <p class="section-lead" style="color:rgba(255,255,255,.82);">Ein Turniertag mit sportlichem Ehrgeiz, kühlen Getränken, Grillerei und jeder Menge Stimmung direkt an der Ravenstone Beachvolleyball-Arena.</p>
         <div class="highlight-grid">
-          <article class="highlight-card"><b>Beachsoccer-Cup</b><span>Packende Spiele, Pokale, Preise und Siegerehrung für die besten Teams.</span></article>
-          <article class="highlight-card"><b>Grillerei</b><span>Für Verpflegung und Stärkung zwischen den Spielen ist gesorgt.</span></article>
-          <article class="highlight-card"><b>Meterwertung</b><span>Jeder auf euren Teamnamen gekaufte Meter zählt – egal ob Spritzer, Bier oder Barmix.</span></article>
-          <article class="highlight-card"><b>Barmix</b><span>Sommerliche Drinks, gute Stimmung und ein Turniertag zum Feiern.</span></article>
+          <article class="highlight-card"><b>Beachsoccer-Cup</b><span>Spannende Spiele im Sand, Pokale und Preise für die erfolgreichsten Teams.</span></article>
+          <article class="highlight-card"><b>Grillerei</b><span>Für Stärkung zwischendurch ist gesorgt – perfekt für Spieler und Besucher.</span></article>
+          <article class="highlight-card"><b>Meterwertung</b><span>Auch abseits des Spielfelds wird gewertet: Jeder Meter auf euren Teamnamen zählt.</span></article>
+          <article class="highlight-card"><b>Barmix</b><span>Kühle Drinks, Sommerstimmung und gemütlicher Ausklang nach den Spielen.</span></article>
         </div>
       </div>
     </section>
@@ -573,6 +600,10 @@
       boxes[1].textContent = hours;
       boxes[2].textContent = minutes;
       boxes[3].textContent = secs;
+      const mobileCountdown = document.getElementById("mobileCountdown");
+      if (mobileCountdown) {
+        mobileCountdown.innerHTML = `Noch <span>${days} Tage · ${hours} Std. · ${minutes} Min.</span> bis zum Turnier`;
+      }
     }
     updateCountdown();
     setInterval(updateCountdown, 1000);
