@@ -395,14 +395,34 @@
 
     .contact-card {
       display: grid;
-      grid-template-columns: 1fr auto;
-      gap: 24px;
-      align-items: center;
+      grid-template-columns: 1fr 1fr;
+      gap: 28px;
+      align-items: stretch;
       background: var(--green-dark);
       color: white;
       border-radius: 34px;
       padding: clamp(28px, 5vw, 48px);
       box-shadow: var(--shadow);
+    }
+    .contact-column {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      gap: 22px;
+    }
+    .location-box {
+      background: rgba(255,255,255,.08);
+      border: 1px solid rgba(255,255,255,.14);
+      border-radius: 24px;
+      padding: 24px;
+    }
+    .location-box h3 {
+      margin: 0 0 12px;
+      font-size: 26px;
+      letter-spacing: -0.03em;
+    }
+    .location-box p {
+      line-height: 1.6;
     }
     .contact-card h2 { margin: 0 0 10px; font-size: clamp(32px, 5vw, 54px); letter-spacing: -0.05em; }
     .contact-card p { margin: 0; color: rgba(255,255,255,.82); font-size: 18px; }
@@ -447,7 +467,9 @@
         min-height: 230px;
         scroll-snap-align: start;
       }
-      .contact-card { text-align: center; }
+      .contact-card { text-align: center; grid-template-columns: 1fr; }
+      .location-box { padding: 20px; }
+      .contact-column .btn, .location-box .btn { width: 100%; }
     }
   </style>
 </head>
@@ -467,7 +489,7 @@
         <div>
           <div class="eyebrow">27. Juni 2026 · Start 10:00 Uhr</div>
           <h1>18. Voralpen <span>Beachsoccer-Cup</span></h1>
-          <p class="lead">Sand, Tore, Sommerfeeling und echte Turnierstimmung in der Ravenstone Beachvolleyball-Arena – jetzt Startplatz sichern!</p>
+          <p class="lead">Sand, Tore, Musik und echte Turnierstimmung in der Ravenstone Beachvolleyball-Arena. Maximal 12 Teams – schnell anmelden und dabei sein.</p>
           <div class="hero-actions">
             <button class="btn btn-primary" data-tally-open="b56Zo1" data-tally-layout="modal" data-tally-width="720" data-tally-emoji-text="⚽" data-tally-emoji-animation="wave">Jetzt Team anmelden</button>
             <a class="btn btn-secondary" href="#regeln">Regeln ansehen</a>
@@ -566,11 +588,18 @@
     <section id="kontakt">
       <div class="container">
         <div class="contact-card">
-          <div>
-            <h2>Fragen zum Turnier?</h2>
-            <p>Anmeldung & nähere Infos bei Manuel Grünbichler.</p>
+          <div class="contact-column">
+            <div>
+              <h2>Fragen zum Turnier?</h2>
+              <p>Anmeldung & nähere Infos bei Manuel Grünbichler.</p>
+            </div>
+            <a class="btn btn-primary" href="tel:+436766464341">+43 676 6464341</a>
           </div>
-          <a class="btn btn-primary" href="tel:+436766464341">+43 676 6464341</a>
+          <div class="location-box">
+            <h3>📍 Standort</h3>
+            <p><strong>Ravenstone Beachvolleyball-Arena</strong><br>Königsbachstraße 2<br>3203 Rabenstein an der Pielach</p>
+            <a class="btn btn-secondary" href="https://www.google.com/maps/search/?api=1&query=K%C3%B6nigsbachstra%C3%9Fe+2,+3203+Rabenstein+an+der+Pielach" target="_blank" rel="noopener">Route öffnen</a>
+          </div>
         </div>
       </div>
     </section>
